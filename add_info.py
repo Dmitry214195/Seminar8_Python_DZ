@@ -9,8 +9,7 @@ def add_info(file):
                 'Биология', 'Химия', 'История', 'География', 'Физика']
         writer = csv.DictWriter(data, fieldnames= fields)
         writer.writerow({'Фамилия': last_name, 'Имя': first_name, 'Класс': num_class})
-
-        
+       
 def add_grades(file):
     subject = input('Введите название предмета: ').capitalize()
     grade = input('Введите оценку: ')
@@ -28,7 +27,6 @@ def add_grades(file):
         writer = csv.DictWriter(data, fieldnames= fields)
         writer.writerows(my_dict)
     
-
 def change_info(file):
     print('Введите цифру, соответствующую типу информации, которую нужно изменить:')
     type_info = int(input('1 - фамилия\n2 - имя\n3 - класс\n'))
